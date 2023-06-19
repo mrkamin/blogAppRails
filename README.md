@@ -102,6 +102,17 @@ rails s
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-rafi-amin-63b4319b/)
 
 
+🕵🏽‍♀️ **Abraham Christopher**
+
+- GitHub: [@cabraham1](https://github.com/cabraham1)
+- Twitter: [@_cabraham](https://twitter.com/_cabraham)
+- LinkedIn [Abraham Christopher](https://linkedin.com/in/abrahamchrisotpher)
+
+👤 **Alejandra Keber Maggi**
+- GitHub: [@AlejandraKeber](https://github.com/AlejandraKeber)
+- Twitter: [@KeberAlejandra](https://twitter.com/KeberAlejandra)
+- LinkedIn: [alejandra-keber](www.linkedin.com/in/alejandra-keber)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
