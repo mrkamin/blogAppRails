@@ -19,7 +19,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'user respond body with correct place holder' do
       get '/users/'
-      expect(response.body).to include('Select from users')
+      expect(response.body).to include('Number of posts')
     end
   end
   describe "User GET /show'" do
@@ -33,7 +33,7 @@ RSpec.describe 'Users', type: :request do
     end
     it 'user detail respond body with correct place holder' do
       get "/users/#{user.id}"
-      expect(response.body).to include('Here is user index 1 page')
+      expect(response.body).to include('Teacher from Mexico')
     end
   end
 end

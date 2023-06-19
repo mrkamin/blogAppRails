@@ -1,0 +1,32 @@
+{
+  "name": "blogapprails",
+  "version": "1.0.0",
+  "description": "The Blog app will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts..",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrkamin/blogAppRails.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrkamin/blogAppRails/issues"
+  },
+  "homepage": "https://github.com/mrkamin/blogAppRails#readme",
+  
+    "devDependencies": {
+      "stylelint": "^13.13.1",
+      "stylelint-config-standard": "^21.0.0",
+      "stylelint-csstree-validator": "^1.9.0",
+      "stylelint-scss": "^3.21.0"
+    }
+  
+}
