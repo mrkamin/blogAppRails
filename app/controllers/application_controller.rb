@@ -1,2 +1,5 @@
 class ApplicationController < ActionController::Base
-end
+    def current_user
+      @user = User.find(1)
+    end
+  end
