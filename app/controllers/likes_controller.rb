@@ -1,4 +1,6 @@
 class LikesController < ApplicationController
+  load_and_authorize_resource
+
   def create
     @like = current_user.likes.new
     @like.post_id = params[:post_id]

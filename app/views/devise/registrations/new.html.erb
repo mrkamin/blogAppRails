@@ -16,6 +16,11 @@
     <%= f.email_field :email, autofocus: true, class:'login_email', autocomplete: "email" %>
   </div>
 
+  <div class="field">
+    <%= f.label :Role %><br />
+    <%= f.select :role, ['admin', 'author'], autofocus: true, class:'login_email' %>
+  </div> 
+
   <br />
   <div class="field">
     <%= f.label :password %>

@@ -17,11 +17,30 @@
             <ul class="post_details_section1_user_comment_box list_style_none">
              <% @post.latest_five_comments.includes(:author).each do |comment| %>
                 <li> <%= comment.author.name %>: <%= comment.text %></li>
+                <br>
+                <% if can? :destroy, comment %>
+                <button class="login_btn">
+                <%= link_to 'Delete Comment', user_post_comment_path(@user, comment.post, comment.id) , data: { turbo_method: :delete,
+                    turbo_confirm: "Are you sure you want to delete Comment?"
+                  } %>
+                </button>
+                <% end %>
              <% end %>
             </ul>
 
             <br><br>
             <div><%= render "comments/form" %> </div>
             <div><%= render "shared_features/likeforms" %></div>
+ 
+
+            <div>
+                <% if can? :destroy, @post%>
+                    <button class='login_btn'>
+                    <%= link_to 'Delete Post', user_post_path(@user, @post), data: { turbo_method: :delete,
+                    turbo_confirm: "Are you sure you want to delete Post?"} %>
+                    </button>
+                <% end %>
+            </div>
+
         </section>
 </main>
