@@ -1,5 +1,4 @@
 class Api::V1::PostsController < ApplicationController
-  class Api::V1::PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
@@ -48,3 +47,4 @@ class Api::V1::PostsController < ApplicationController
 
   private :post_params
 end
+
