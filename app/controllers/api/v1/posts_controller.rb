@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Api::V1::PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
@@ -6,7 +6,6 @@ class PostsController < ApplicationController
     @posts = Post.all.includes(:comments)
 
     respond_to do |format|
-      format.html
       format.json { render json: @posts, status: 200 }
     end
   end
@@ -16,7 +15,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      format.html
       format.json { render json: @post, status: 200 }
     end
   end

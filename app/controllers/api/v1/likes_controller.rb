@@ -1,4 +1,4 @@
-class LikesController < ApplicationController
+class Api::V1::LikesController < ApplicationController
   load_and_authorize_resource
 
   def index
@@ -7,7 +7,6 @@ class LikesController < ApplicationController
     @likes = post.likes
 
     respond_to do |format|
-      format.html
       format.json { render json: @likes, status: 200 }
     end
   end
@@ -18,12 +17,10 @@ class LikesController < ApplicationController
 
     if @like.save
       respond_to do |format|
-        format.html { redirect_to user_post_path(current_user, @like.post) }
         format.json { render json: @like, status: 200 }
       end
     else
       respond_to do |format|
-        format.html { render :create }
         format.json { render json: @like.errors, status: :unprocessable_entity }
       end
     end

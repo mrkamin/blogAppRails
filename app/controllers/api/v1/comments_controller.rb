@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class Api::V1::CommentsController < ApplicationController
   load_and_authorize_resource
 
   def index
@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
     @comments = @post.comments
 
     respond_to do |format|
-      format.html
       format.json { render json: @comments, status: 200 }
     end
   end
@@ -17,14 +16,11 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:post_id]
 
     if @comment.save
-      # redirect_to previous url link or page if available using  redirect_to request.referrer
       respond_to do |format|
-        format.html { redirect_to request.referrer }
         format.json { render json: @comment, status: :created }
       end
     else
       respond_to do |format|
-        format.html { render :create }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
@@ -37,7 +33,6 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    # redirect_to previous url link or page if available
     redirect_to request.referrer
   end
 
