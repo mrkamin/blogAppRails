@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: :post_id, dependent: :delete_all
 
   after_save :update_post_counter
+  after_destroy :decrement_post_counter
 
   validates :title, presence: true
   validates :comments_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
@@ -17,5 +18,9 @@ class Post < ApplicationRecord
     author.update(posts_counter: author.posts.all.length)
   end
 
-  private :update_post_counter
+  def decrement_post_counter
+    author.decrement!(:posts_counter)
+  end
+
+  private :update_post_counter, :decrement_post_counter
 end
