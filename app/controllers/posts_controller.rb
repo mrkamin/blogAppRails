@@ -10,7 +10,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @showcurrentuser = current_user
   end
 
   def create
