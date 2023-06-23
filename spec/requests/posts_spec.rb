@@ -6,7 +6,7 @@ RSpec.describe 'Posts', type: :request do
   post = Post.new(
     title: 'Title 1',
     text: 'Text 1',
-    author: user,
+    author_id: user.id,
     comments_counter: 0,
     likes_counter: 0
   )
