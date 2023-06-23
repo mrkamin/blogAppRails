@@ -47,4 +47,3 @@ class Api::V1::PostsController < ApplicationController
 
   private :post_params
 end
-
